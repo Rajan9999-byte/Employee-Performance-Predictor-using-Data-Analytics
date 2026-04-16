@@ -1,0 +1,5 @@
+content = open('src/dashboard.py', 'r', encoding='utf-8').read()
+count = content.count('use_container_width=True')
+fixed = content.replace('use_container_width=True', 'width="stretch"')
+open('src/dashboard.py', 'w', encoding='utf-8').write(fixed)
+print(f"Fixed {count} deprecation warnings")
